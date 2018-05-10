@@ -1,0 +1,41 @@
+.App {
+  text-align: center; }
+
+.box {
+  height: calc(100vh - 180px);
+  margin: 10px 10px 0px 10px; }
+
+.board {
+  background: #86b356;
+  background: -moz-linear-gradient(left, #86b356 0%, #4c880c 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #86b356), color-stop(100%, #4c880c));
+  background: -webkit-linear-gradient(left, #86b356 0%, #4c880c 100%);
+  background: -o-linear-gradient(left, #86b356 0%, #4c880c 100%);
+  background: -ms-linear-gradient(left, #86b356 0%, #4c880c 100%);
+  background: linear-gradient(to right, #86b356 0%, #4c880c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86b356', endColorstr='#4c880c', GradientType=1 );
+  padding: 10px;
+  display: flex;
+  flex-direction: column; }
+
+.panel {
+  background-color: #f2f0f0 !important;
+  width: 100%; }
+
+.row-cards {
+  display: flex;
+  height: calc(100vh - 180px); }
+
+.game-btns {
+  margin-top: 20px; }
+  .game-btns button {
+    font-size: 2em;
+    font-weight: 600; }
+
+.modal-footer {
+  border: none; }
+
+.player-panel {
+  margin-top: 20px;
+  padding-left: 15px;
+  text-align: left; }

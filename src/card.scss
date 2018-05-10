@@ -1,0 +1,23 @@
+.card {
+    border-radius: 10px;
+    border: 2px solid #fff;
+    height: 100%;
+
+    h1 {
+        font-size: 8em;
+    }
+}
+
+.Flipcard-front,.Flipcard-back  {
+    padding: 7px;
+    width: 100%;
+    height: calc((100vh - 180px) / 3);
+}
+
+.flippable {
+    flex: 1;
+}
+
+.hidden-card {
+    background-color: #cef;
+}
