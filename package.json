@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@kennethormandy/react-flipcard": "^0.4.2",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "bootstrap-sass": "^3.3.7",
     "cross-fetch": "^2.1.0",
     "font-awesome": "^4.7.0",
