@@ -35,8 +35,7 @@ export default class PlayerModal extends Component {
     }
 
     async componentDidMount() {
-        const response = await fetch("/api/players.php");
-
+        const response = await fetch(`/api/base.php?type=players`);
         this.players = await response.json();
     }
 

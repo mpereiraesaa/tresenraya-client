@@ -25,63 +25,50 @@ class App extends Component {
     }
 
     onSave = async (values) => {
-        const response = await fetch("/api/game.php", {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(values)
-        });
+        const data = encodeURIComponent(JSON.stringify(values));
+        const response = await fetch(`/api/base.php?type=game&gamedata=${data}`);
+        let results = await response.json();
 
-        let data = await response.json();
-
-        if (data){
+        if (results){
             await this.setState({
-                game: data,
-                next: data.player1_mark,
+                game: results,
+                next: results.player1_mark,
                 playerActive: 1
             });
         }
 
-        return data;
+        return results;
     }
 
     onMove = async (cellCode) => {
-        const response = await fetch("/api/move.php", {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ game: this.state.game.id, value: this.state.next,
-                player: this.state.game[`player${this.state.playerActive}`]["id"], cell: cellCode })
-        });
+        const json = JSON.stringify({ game: this.state.game.id, value: this.state.next,
+            player: this.state.game[`player${this.state.playerActive}`]["id"], cell: cellCode })
+        const data = encodeURIComponent(json);
+        const response = await fetch(`/api/base.php?type=move&movedata=${data}`);
+        let results = await response.json();
 
-        let data = await response.json();
-
-        if (data.winner) {
+        if (results.winner) {
             let player = false;
 
-            if (data.winner.id === this.state.game.player1.id) {
+            if (results.winner.id === this.state.game.player1.id) {
                 player = 1;
             }
             else {
                 player = 2;
             }
 
-            let game = {...this.state.game, [`player${player}`] : data.winner };
+            let game = {...this.state.game, [`player${player}`] : results.winner };
 
             await this.setState({
                 next: null,
-                winner: data.winner,
+                winner: results.winner,
                 game
             });
         }
 
         this.setState({
-            next: data.next,
-            playerActive: data.nextPlayer
+            next: results.next,
+            playerActive: results.nextPlayer
         });
     }
 
