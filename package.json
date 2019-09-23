@@ -6,7 +6,7 @@
   "dependencies": {
     "@kennethormandy/react-flipcard": "^0.4.2",
     "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "cross-fetch": "^2.1.0",
     "font-awesome": "^4.7.0",
     "moment": "^2.22.1",
