@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## Tres en raya Game client
+## Tres en raya game with the client
 
-Made using React.js ES6/7 and a react card flip plugin.
+Made using React, ES6, ES7 and react flipcard plugin.
 
-## This is for the backend project "tresenraya"
+## This is a client including the game itself for use with the backend project "tresenraya".
 
-ONLINE CLIENT AT: http://transporte2016.16mb.com/
+https://github.com/mpereiraesaa/tresenraya
