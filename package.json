@@ -15,7 +15,7 @@
     "react-bootstrap-modal": "^4.0.0",
     "react-dom": "^16.3.1",
     "react-proptypes": "^1.0.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start-js": "react-scripts start",
